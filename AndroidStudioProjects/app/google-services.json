@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "411723406840",
+    "firebase_url": "https://gymclubb100-1549398570834.firebaseio.com",
+    "project_id": "gymclubb100-1549398570834",
+    "storage_bucket": "gymclubb100-1549398570834.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411723406840:android:f45c50640cd66002",
+        "android_client_info": {
+          "package_name": "com.example.gymclubb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411723406840-6e3l67cokn7pilc2eifa4v7if0c6e0bb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gymclubb",
+            "certificate_hash": "202012340dbf3b1d8bba282d4536b5090e27c8fc"
+          }
+        },
+        {
+          "client_id": "411723406840-vt30tr65qeo1a5v2ja1hd00khn9r3i7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBinQrM7nNYLNjFQVlw9C0kogAUMQfHSKo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411723406840-vt30tr65qeo1a5v2ja1hd00khn9r3i7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
