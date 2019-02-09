@@ -24,8 +24,6 @@
                 android:fitsSystemWindows="true"
                 app:title="GymClub"
                 app:expandedTitleMarginStart="210dp"
-
-
         >
 
             <ImageView
@@ -56,34 +54,85 @@
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_gravity="fill_horizontal"
             >
                 <androidx.cardview.widget.CardView android:layout_width="match_parent"
                                                    android:layout_height="2dp"
                                                    android:elevation="8dp"
                                                    app:cardBackgroundColor="@color/colorSecondaryDark"/>
 
-                <TextView
-                        android:textColor="@color/colorSecondary"
-                        android:padding="12dp"
-                        android:textSize="20sp"
-                        android:layout_marginTop="12dp"
-                        android:textStyle="bold"
-                        android:text="@string/recent_news"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                <GridLayout
 
-                <TextView
-                        android:padding="12dp"
-                        android:textColor="@color/colorSecondaryLight"
-                        android:textSize="13sp"
-                        android:lineSpacingMultiplier="1.5"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/in_news"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/choice_grid"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                />
+                        android:layout_centerHorizontal="true"
+                        android:padding="4dp"
+                        android:alignmentMode="alignBounds"
+                        android:columnCount="2"
+                        android:rowOrderPreserved="false"
+                        android:useDefaultMargins="true"
+                    >
+
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/chest"
+                            app:text="@string/string_chest"/>
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/back"
+                            app:text="@string/string_back"/>
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/shoulders"
+                            app:text="@string/string_shoulders"/>
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/abs"
+                            app:text="@string/string_abs"/>
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/arms"
+                            app:text="@string/string_arms"/>
+                    <com.example.gymclubb.HomeScreenCardView
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
+                            android:gravity="center"
+                            android:background="#FF33B5E5"
+                            app:image="@drawable/legs"
+                            app:text="@string/string_legs"/>
+
+
+                </GridLayout>
 
             </LinearLayout>
 
