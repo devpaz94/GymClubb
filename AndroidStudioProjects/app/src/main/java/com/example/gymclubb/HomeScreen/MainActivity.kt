@@ -3,13 +3,13 @@ package com.example.gymclubb.HomeScreen
 import android.os.Bundle
 import com.example.gymclubb.R
 
-import androidx.appcompat.app.AppCompatActivity
+import com.example.gymclubb.BaseActivity
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
     }
 
 }
