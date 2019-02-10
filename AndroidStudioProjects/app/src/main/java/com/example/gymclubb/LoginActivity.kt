@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import android.widget.ImageView
 import com.example.gymclubb.HomeScreen.MainActivity
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -27,7 +28,7 @@ class LoginActivity: AppCompatActivity(){
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
 
-        val signInButton = findViewById<SignInButton>(R.id.google_button)
+        val signInButton = findViewById<ImageView>(R.id.login_button)
         signInButton.setOnClickListener {
             signIn()
         }
@@ -61,13 +62,11 @@ class LoginActivity: AppCompatActivity(){
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
-                toast("Google Success!")
 
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)
                 firebaseAuthWithGoogle(account!!)
             } catch (e: ApiException) {
-                toast(e.toString())
 
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e)
@@ -82,7 +81,6 @@ class LoginActivity: AppCompatActivity(){
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    toast("Firebase Success!")
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
                     val intent = Intent(this, MainActivity::class.java)
@@ -91,7 +89,6 @@ class LoginActivity: AppCompatActivity(){
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
-                    toast("Firebase Failed!")
 
                 }
             }

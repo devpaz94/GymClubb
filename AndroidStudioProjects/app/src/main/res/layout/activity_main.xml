@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                 xmlns:tools="http://schemas.android.com/tools"
-                                                 android:layout_width="match_parent"
-                                                 android:layout_height="match_parent"
-                                                 tools:context=".HomeScreen.MainActivity">
-
-<com.google.android.material.appbar.AppBarLayout
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     tools:context=".HomeScreen.MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -14,7 +13,7 @@
             android:fitsSystemWindows="true"
             app:layout_constraintTop_toTopOf="parent"
             android:elevation="8dp"
->
+    >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
@@ -22,20 +21,15 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary"
                 android:fitsSystemWindows="true"
-                app:title="GymClub"
-                app:expandedTitleMarginStart="210dp"
-        >
+                app:title="GYMCLUB"
+                app:expandedTitleGravity="center"
+                app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+                app:collapsedTitleTextAppearance="@style/CollapsedAppBar">
 
-            <ImageView
-                    app:layout_collapseMode="parallax"
-                    android:src="@drawable/zyzz"
-                    android:contentDescription="@string/app_name"
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"/>
 
             <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
+                    app:subtitleTextAppearance="@style/CollapsedAppBar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -50,92 +44,100 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:paddingBottom="?attr/actionBarSize"
             android:background="@color/colorPrimary">
 
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_gravity="fill_horizontal"
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="fill_horizontal"
+                android:elevation="2dp"
+        >
+
+         <com.example.gymclubb.HomeScreen.UI.StatsCard
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8dp"
+         >
+
+
+         </com.example.gymclubb.HomeScreen.UI.StatsCard>
+
+
+            <GridLayout
+                    android:id="@+id/choice_grid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:alignmentMode="alignBounds"
+                    android:columnCount="2"
+                    android:rowOrderPreserved="false"
+                    android:useDefaultMargins="true"
+
             >
-                <androidx.cardview.widget.CardView android:layout_width="match_parent"
-                                                   android:layout_height="2dp"
-                                                   android:elevation="8dp"
-                                                   app:cardBackgroundColor="@color/colorSecondaryDark"/>
 
-                <GridLayout
-
-                        android:id="@+id/choice_grid"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:padding="4dp"
-                        android:alignmentMode="alignBounds"
-                        android:columnCount="2"
-                        android:rowOrderPreserved="false"
-                        android:useDefaultMargins="true"
-                    >
-
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/chest"
-                            app:text="@string/string_chest"/>
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/back"
-                            app:text="@string/string_back"/>
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/shoulders"
-                            app:text="@string/string_shoulders"/>
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/abs"
-                            app:text="@string/string_abs"/>
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/arms"
-                            app:text="@string/string_arms"/>
-                    <com.example.gymclubb.HomeScreenCardView
-                            android:layout_width="0dp"
-                            android:layout_height="200dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="fill_horizontal"
-                            android:gravity="center"
-                            android:background="#FF33B5E5"
-                            app:image="@drawable/legs"
-                            app:text="@string/string_legs"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/chest"
+                        app:text="@string/string_chest"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/back"
+                        app:text="@string/string_back"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/shoulders"
+                        app:text="@string/string_shoulders"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/abs"
+                        app:text="@string/string_abs"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/arms"
+                        app:text="@string/string_arms"/>
+                <com.example.gymclubb.HomeScreen.UI.HomeScreenCardView
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:gravity="center"
+                        android:background="#FF33B5E5"
+                        app:image="@drawable/legs"
+                        app:text="@string/string_legs"/>
 
 
-                </GridLayout>
+            </GridLayout>
 
-            </LinearLayout>
-
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,8 +1,9 @@
-package com.example.gymclubb
+package com.example.gymclubb.HomeScreen.UI
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
+import com.example.gymclubb.R
 import kotlinx.android.synthetic.main.home_sreen_card_view.view.*
 
 
