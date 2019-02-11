@@ -3,17 +3,18 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
         <item
                 android:id="@+id/settings"
-                android:title="Import"/>
+                android:title="Home"
+                android:icon="@drawable/ic_home_black_24dp"/>
         <item
                 android:id="@+id/home"
-                android:title="Gallery"/>
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Settings"/>
         <item
                 android:id="@+id/logout"
-                android:title="Slideshow"/>
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Sign-Out"/>
 
-    </group>
 
 </menu>
